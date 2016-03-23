@@ -88,5 +88,5 @@ void sort(int wordsQuantity, int method) {
 	int nxt;
 	cout << "Чтобы отсортировать другим методом введите 3. При любом другом значении, программа будет закрыта." << endl;
 	cin >> nxt;
-	if (nxt == 3)sort(wordsQuantity, method + 1);
+	if (nxt == 3)sort(wordsQuantity, method + 1); else system("color 2f");
 }
