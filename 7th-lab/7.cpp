@@ -53,10 +53,17 @@ void sort(int wordsQuantity, int method) {
 		method = 1;
 		cout << "Похоже, что-то пошло не так... Сортировка будет выполнена по возрастанию!" << endl;
 	}
-
 	int sortedWords[100];//массив отстортированных слов
 	bool done = false;//готово/нет
 	for (int i = 0; i < wordsQuantity; i++) {
+		if (!atoi(existingWords[i])) {
+			char *renew;
+			renew = existingWords[i];
+			while (!atoi(renew)) {
+				*renew++;
+			}
+			strcpy_s(existingWords[i], renew);
+		}
 		sortedWords[i] = atoi(existingWords[i]);
 	}	
 	while (!done) {
